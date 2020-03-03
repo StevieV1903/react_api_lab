@@ -1,4 +1,5 @@
 import React from "react";
+import "./SongSelector.css"
 
 const SongSelector = props => {
   const options = props.songs.map(song => {
@@ -19,7 +20,7 @@ const SongSelector = props => {
   return (
     <select onChange={handleChange} defaultValue="default">
       <option disabled value="default">
-        Choose a song
+        Select a song
       </option>
       {options}
     </select>

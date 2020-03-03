@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SongSelector from "../components/SongSelector";
 import SongDetail from "../components/SongDetail";
+import "./SongsContainer.css"
 
 export default class SongsContainer extends Component {
   constructor(props) {
@@ -46,7 +47,7 @@ export default class SongsContainer extends Component {
   render() {
     return (
       <div>
-        <h2>Top 20 Songs on Itunes</h2>
+        <h2>Top 20 Songs on Itunes Charts</h2>
         <SongSelector
           songs={this.state.songs}
           onSongSelected={this.handleSongSelected}
