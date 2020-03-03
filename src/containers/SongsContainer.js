@@ -9,6 +9,7 @@ export default class SongsContainer extends Component {
       songs: [],
       selectedSongId: ""
     };
+    this.handleSongSelected = this.handleSongSelected.bind(this);
   }
 
   componentDidMount() {
@@ -22,11 +23,38 @@ export default class SongsContainer extends Component {
       .catch(error => console.error);
   }
 
+  handleSongSelected(songId) {
+    this.setState({ selectedSongId: songId });
+  }
+
+  getSelectedSong() {
+    const selectedSong = this.state.songs.find(song => {
+      return song.id.attributes["im:id"] === this.state.selectedSongId;
+    });
+
+    return selectedSong;
+  }
+
+  getChartPosition() {
+    const selectedSong = this.state.songs.find(song => {
+      return song.id.attributes["im:id"] === this.state.selectedSongId;
+    });
+    let chartPosition = this.state.songs.indexOf(selectedSong);
+    return (chartPosition += 1);
+  }
+
   render() {
     return (
       <div>
         <h2>Top 20 Songs on Itunes</h2>
-        <SongSelector songs={this.state.songs} />
+        <SongSelector
+          songs={this.state.songs}
+          onSongSelected={this.handleSongSelected}
+        />
+        <SongDetail
+          song={this.getSelectedSong()}
+          chartPosition={this.getChartPosition()}
+        />
       </div>
     );
   }
