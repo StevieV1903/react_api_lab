@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import SongSelector from "../components/SongSelector";
+import SongDetail from "../components/SongDetail";
 
 export default class SongsContainer extends Component {
   constructor(props) {
@@ -24,6 +26,7 @@ export default class SongsContainer extends Component {
     return (
       <div>
         <h2>Top 20 Songs on Itunes</h2>
+        <SongSelector songs={this.state.songs} />
       </div>
     );
   }
