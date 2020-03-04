@@ -47,7 +47,7 @@ export default class SongsContainer extends Component {
   render() {
     return (
       <div>
-        <h2>Top 20 Songs on Itunes Charts</h2>
+        <h1>Itunes Charts Top 20</h1>
         <SongSelector
           songs={this.state.songs}
           onSongSelected={this.handleSongSelected}

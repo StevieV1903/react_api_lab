@@ -1,15 +1,17 @@
 div {
-  background-color: #d6f1fa;
-  color: #005162;
+  background-color: #d6ffe9;
   width: 50%;
-  font-family: 'arial', sans-serif;
   border: 2px solid #2b00ff;
   padding: 15px;
   margin: auto;
+  display: auto;
 }
 
-h2 {
-  color: #000000;
+h1 {
+  font-family: 'Arial';
+  color: #470000;
   font-weight: bold;
+  text-align: center;
+
 
 }

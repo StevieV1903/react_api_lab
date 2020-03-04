@@ -1,6 +1,5 @@
 article {
   margin: auto;
-  color: black;
   text-align: left;
 
 }
@@ -10,4 +9,19 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 40%;
+}
+
+h2 {
+  color: #100053;
+  text-align: center;
+  font-family: 'Arial';
+  font-size: 26px;
+}
+
+h3 {
+  color: #100053;
+  text-align: center;
+  font-family: 'Arial';
+  font-size: 22px;
+
 }
