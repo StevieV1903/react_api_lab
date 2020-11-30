@@ -46,8 +46,8 @@ export default class SongsContainer extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Itunes Charts Top 20</h1>
+      <div className="app-container">
+        <h1>Music Charts</h1>
         <SongSelector
           songs={this.state.songs}
           onSongSelected={this.handleSongSelected}
